@@ -49,8 +49,6 @@ def analyze_fringes(image):
     contours, _ = cv2.findContours(image, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
     centroids = [np.mean(cnt, axis=0)[0] for cnt in contours]
     
-    # Implement your curve fitting or surface fitting method here
-    # For example, if you want to fit a linear function:
     def linear_func(x, a, b):
         return a * x + b
 
